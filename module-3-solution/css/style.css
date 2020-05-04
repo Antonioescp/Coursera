@@ -67,6 +67,8 @@ body
 #main-content h2
 {
 	text-shadow: 1px 1px 1px #222;
+	margin-top: 0;
+	margin-bottom: 20px;
 }
 
 #ph
