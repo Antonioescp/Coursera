@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- External File -->
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<!-- Internal script -->
+	<script type="text/javascript">
+
+		// lecture 40
+		// External variables can be used internally, single threaded enginge
+		// Excustes line by line one after another
+
+		// console.log(x);
+
+	</script>
+
+	<!-- Executed sequencially -->
+
+	<title>Javascript Repaso</title>
+
+</head>
+<body>
+
+	<h1>Lecture 40</h1>
+	<h1>Lecture 41</h1>
+
+	<p>
+		// var must always be used to declared a variable <br>
+		// same variable can hold different types <br> <br> 
+
+		// functions <br>
+		// function name (event) {} <br>
+		// a variable can store a function, var a function (event) {} <br> 
+		// functions are invoked taking the name with parenthesis a() <br>
+		// arguments are define without var function a (x,y) {} <br> <br>
+
+		// All legal <br>
+		// function compare (x,y) {} <br>
+		// var a = compare(4,5); we can save it to a var <br>
+		// compare(4, "a"); we can use different value types as arguments <br>
+		// compare(); it can be invoked argumentless <br>
+	</p>
+
+	<h2>Scope</h2>
+
+	<p>is the excecution context</p>
+
+	<h3>Global scope</h3>
+
+	<p>is the global execution context, variables can be used anywhere together with functions</p>
+
+	<h3>Function scope aka lexical scope</h3>
+
+	<p>Functions signify a new scope, meaning variables are only created and used in the function context</p>
+
+	<h2>Scope Chain</h2>
+
+	<p>
+		// Everything is executed in an excecition context <br>
+		// Function invocation creates a new Execution Context <br> 
+		// Each execution context has: <br>
+		- It's own variable environment <br>
+		- Special 'This' object <br>
+		- Reference to its Outer Environment <br>
+		// Global Scope does not have an outer environment
+	</p>
+
+	<h3>Functioning</h3>
+	<p>
+		Referenced (not defined) variable will be searched for in its current scope first. if not found, the outer reference will be searched. if not found, the Outer Referebce's Outer Reference will be searched, etc. This will keep going until the Global Scope. If not found in Global Scope, the variable is undefined.
+	</p>
+
+	<!-- figure 1 -->
+	<div id="global">
+
+		<h1>Global</h1>
+		<table>
+			<tr>
+				<td>var x = 2;</td>
+			</tr>
+			<tr>
+				<td>A();</td>
+			</tr>
+		</table>
+
+		<div id="function-a">
+			<h1>Function A</h1>
+			<table>
+				<tr>
+					<td>var x = 5;</td>
+				</tr>
+				<tr>
+					<td>B();</td>
+				</tr>
+			</table>
+		</div>
+		<div id="function-b">
+			<h1>Function B</h1>
+			<table>
+				<tr>
+					<td>console.log(x)</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<p id="result">
+		The result is 5 as in the global, the B's Outer Reference is the global scope, even though it was invoked inside A function, B was defined in the global scope.
+	</p>
+
+	<h1>Summary</h1>
+	<ul>
+		<li>Defining variables - dinamically typed</li>
+		<li>Defining functions - creates its own scope (lexical)</li>
+		<li>JS code runs within an execution context</li>
+		<li>Scope chain is used to retrieve variables from Outer Variable Environments</li>
+	</ul>
+
+
+	<!-- lecture 42 -->
+	<h1>Lecture 42</h1>
+	<h2>Types</h2>
+	<p>Has built-in types</p>
+	<ul>
+		<li>Primitive
+			<ul>
+				<li>Single value, not an object</li>
+				<li>inmutable means once its set, it cannot be changed
+					<ul>
+						<li>Value becomes read-only</li>
+						<li>You can create another value based on an existing one as in b = a+10 being a = 10, b becomes b = 20</li>
+					</ul>
+				</li>
+
+				<li>Boolean
+					<ul>
+						<li>It can only have 2 values, true or false</li>
+					</ul>
+				</li>
+				<li>Undefined
+					<ul>
+						<li>Means no value has ever been set</li>
+						<li>Can only have one value: undefined</li>
+						<li>You can set a variable to undefined, but you should never do it
+							<ul>
+								<li>Its meaning is that it's never been defined, so defining it to undefined is counter to its core meaning</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>Null
+					<ul>
+						<li>Lack of value</li>
+						<li>opposed to undefined</li>
+						<li>can only have one value: null</li>
+						<li>it's ok to explicitly set a variable to null</li>
+					</ul>
+				</li>
+				<li>Number
+					<ul>
+						<li>Is the only numeric type in JS</li>
+						<li>Always represented under the hood as double-precision 64-bit floating point</li>
+						<li>JS does not have an integer type
+							<ul>
+								<li>Integers are a subset of doubles instead of a separate data type</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>String
+					<ul>
+						<li>Is sequence of characters used to represent text</li>
+						<ul>
+							<li>You can define strings using single o double quotes</li>
+						</ul>
+					</ul>
+				</li>
+				<li>Symbol
+					<ul>
+						<li>is new to ES6
+							<ul>
+								<li>isnt widely used</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>Objects
+			<ul>
+				<li> Has name/value pairs as in social: {firstName:Toni}</li>
+			</ul>
+		</li>
+	</ul>
+
+	<h2>Summary</h2>
+	<ul>
+		<li>JS defines 7 built-in types
+			<ul>
+				<li>Object and 6 primitives</li>
+			</ul>
+		</li>
+		<li>Object type is a collection of name/value pairs</li>
+		<li>Primitive type can contain a single, inmutable type</li>
+		<li>Undefined means a variable memory has been allocated but no value has ever been explicitly set yet</li>
+	</ul>
+
+	<h1>Lecture 43</h1>
+	<h2>Common lenguage constracts</h2>
+	
+
+	<!-- lecture 40 -->
+	<!-- Internal body script -->
+	<!-- <script type="text/javascript">
+		console.log("Right before body closing tag");
+	</script> -->
+</body>
+</html>
