@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- JS -->
+	<script type="text/javascript" src="js/ajax-util.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<title>Practica</title>
+</head>
+<body>
+	<!-- separador -->
+	<div id="header"></div>
+
+	<!-- contenedor -->
+	<div class="container">
+
+		<h1 id="title">Testing ajax</h1>
+
+		<table id="datos">
+			<tr>
+				<td>Ingresa tu nombre</td>
+				<td><input type="text" id="nombre"></td>
+			</tr>
+			<tr>
+				<td>Ingresa la edad</td>
+				<td><input type="text" id="edad"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button id="send">Enviar</button><button id="unsend">Esconder</button></td>
+			</tr>
+		</table>
+
+		<!-- div objetivo -->
+		<div id="target">
+			
+		</div>
+
+		<button id="show">Mostrar</button>
+		<button id="hide">Esconder</button>
+		<div id="show_target"></div>
+
+		<button id="get_data">Get</button>
+		<div id="data"></div>
+	</div>
+
+	<!-- pie -->
+	<div id="footer"></div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+<div class="red_div">
+	Im a red div inserted using ajax
+</div>

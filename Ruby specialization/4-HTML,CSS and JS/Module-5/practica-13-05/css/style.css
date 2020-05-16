@@ -1,0 +1,109 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin:0;
+	padding:0;
+	color:white;
+	background-color: black;
+	font-family: 'Helvetica';
+	text-align: center;
+}
+
+/*Header*/
+#header{
+	background-color: rgba(255,255,255,0.1);
+	height:30px;
+	margin-bottom: 20px;
+}
+
+.container{
+	width:90%;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.1);
+	padding:10px;
+}
+
+.container h1{
+	text-align: center;
+}
+
+#footer{
+	background-color: rgba(255,255,255,.1);
+	margin-top: 20px;
+	height:30px;
+}
+
+#target{
+	height:200px;
+	width: 50%;
+	background-color: rgba(255,255,255,0.1);
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	padding:20px;
+	text-align: center;
+}
+
+/*datos*/
+#datos{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+#datos tr td{
+	text-align: left;
+}
+
+#datos tr:nth-child(3) td{
+	text-align: center;
+}
+
+#datos tr td{
+	padding: 5px;
+}
+
+button{
+	border-radius: 3px;
+	border:0;
+	padding:5px;
+}
+
+#send{
+	margin-right:10px; 
+}
+
+#show_target{
+	background-color: rgba(255,255,255,0.1);
+	height:100px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding:20px;
+}
+
+.red_div{
+	background-color: red;
+	border-radius: 10px;
+	padding:20px;
+}
+
+#data{
+	background-color: rgba(255,255,255,0.1);
+	height:100px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding:20px;
+}
