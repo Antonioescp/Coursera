@@ -1,3 +1,10 @@
+# Mis notas
+## Comprueba el funcionamiento
+Para verificar el funcionamiento del codigo, inicia CMD en esta carpeta una vez hayas clonado el repositorio y usa el comando rspec, para que este comando funciones necesitas que mongodb esté funcionando, inicia mongod primero.
+
+## Revisa la solucion
+Este codigo es de la primera prueba de la semana 2 del curso, es una prueba de practica, no es la asignacion de la semana, abajo pueden ver las instrucciones de la asignacion y dentro del script assignment.rb pueden ver la solucion.
+
 # Module 2, Lesson 1: Aggregation Framewework
 
 The overall goal of the assignment is to:
